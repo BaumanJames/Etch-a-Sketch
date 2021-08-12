@@ -1,9 +1,19 @@
+.etch{
+    position: absolute;
+    overflow: hidden;
+    border: 1px solid transparent;
+    margin-top: -100px;
+}
 #container div{
     background-color: rgb(171, 171, 171);
+    position: relative;
+
 }
 
 #container{
-    height: 500px;
-    width: 500px;
+    height: 411px;
+    width: 563px;
+    margin-top: 110px;
+    margin-left: 103px;
     display: grid;
 }

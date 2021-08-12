@@ -11,8 +11,7 @@ const rainbow = document.querySelector('#rainbow');
 const eraser = document.querySelector('#eraser');
 const clear = document.querySelector('#clear');
 const container = document.querySelector('#container');
-
-const color = 'black';
+let color = 'black';
 
 function createGrid (){
     sliderValue = document.querySelector('input').value;
@@ -29,9 +28,30 @@ function createGrid (){
 }
 // creates first grid at value 16
 createGrid();
-
-function changeColor(source){    
-    source.style.backgroundColor = 'black';
+// have a value change based on the buttons and depending on the value do what the buttons say
+black.addEventListener('click', function(){
+    color = "black";
+})
+rainbow.addEventListener('click', ()=>{
+    color = 'rainbow';
+})
+eraser.addEventListener('click', ()=>{
+    color = 'eraser';
+})
+function changeColor(source){  
+    let random = Math.floor(Math.random()* 360);
+    switch (color){
+        case 'black': 
+            source.style.backgroundColor = 'black';
+            break;
+        case 'rainbow':
+            source.style.backgroundColor = `hsl(${random}, 100%, 50%)`;
+            break;
+        case 'eraser':
+            source.style.backgroundColor = '';
+            break;
+    }
+    
 }
 
 //clear grid
