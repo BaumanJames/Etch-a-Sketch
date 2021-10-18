@@ -13,7 +13,21 @@
 #container{
     height: 411px;
     width: 563px;
-    margin-top: 110px;
+
     margin-left: 103px;
     display: grid;
+}
+
+.options{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 20%;
+    height: 100%;
+}
+
+body{
+    background: linear-gradient( 
+131deg
+ , #f89c9a, #64191f);
 }
